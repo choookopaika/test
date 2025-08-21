@@ -1,3 +1,5 @@
+import sys
+
 def build_arr(size, length):
   A = [i+1 for i in range(size)]
   intervals = []
@@ -17,8 +19,7 @@ def build_arr(size, length):
   #print("Полученный путь:", path)
   return path  
     
-size1, length1 = map(int, input("Введите размер первого массива и длину обхода через пробел: ").split())
-size2, length2 = map(int, input("Введите размер второго массива и длину обхода через пробел: ").split())
+size1, length1, size2, length2 = map(int, sys.argv[1:5])
 
 path1 = build_arr(size1, length1)
 path2 = build_arr(size2, length2)
